@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🏗️ Design System - Component Library
 
-## Getting Started
+Este repositório contém um **Design System** desenvolvido com **React, TypeScript e Tailwind CSS**, projetado para fornecer uma biblioteca de componentes reutilizáveis e consistentes. A documentação interativa dos componentes é gerenciada via **Storybook**.
 
-First, run the development server:
+## 🚀 Tecnologias Utilizadas
 
-```bash
+- **React** + **TypeScript** 🔹  
+- **Tailwind CSS** 🎨  
+- **Storybook** 📚  
+- **Radix UI** ♿ (acessibilidade aprimorada)  
+- **Lucide Icons** 🔄 (ícones modernos e personalizáveis)  
+
+## 📖 Documentação dos Componentes
+Todos os componentes possuem documentação interativa via Storybook.
+A documentação está disponível em: [Storybook Deploy](https://tercette.github.io/my-design-system/?path=/docs/design-system-table--docs).
+A especificação técnica dos componentes foi feita com base nas diretrizes do time de UI/UX.
+Cada componente usa tokens de design para garantir consistência visual.
+
+## Este projeto foi desenvolvido para demonstrar habilidades em:
+Componentização e reutilização no React.
+Boas práticas de CSS com Tailwind.
+Acessibilidade e UX/UI.
+Documentação via Storybook.
+
+## Persistencia de dados da aplicacao
+Os dados da tabela utilizam o localStorage para persistencia de estado.
+
+## 📦 Instalação e Configuração
+
+Siga os passos abaixo para rodar o projeto localmente:
+
+## 📥 1. Clone o Repositório
+git clone https://github.com/seu-usuario/seu-repositorio.git
+cd seu-repositorio
+
+## 📦 2. Instale as Dependências
+npm install ou yarnr install
+
+## 📌 3. Rodando o Storybook
+
+npm run storybook ou yarn storybook
+Acesse no navegador: http://localhost:6006/
+
+## 🔧 4. Rodando o Projeto
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🔗 Acesse a documentação: https://tercette.github.io/my-design-system/?path=/docs/design-system-table--docs
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🤝 Contribuição
+Sinta-se à vontade para contribuir com melhorias, sugerir novos componentes ou abrir issues.
+Faça um fork do projeto.
+Crie uma branch para sua feature (git checkout -b minha-feature).
+Commit suas alterações (git commit -m 'Adiciona minha feature').
+Faça o push para sua branch (git push origin minha-feature).
+Abra um Pull Request.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Este projeto está licenciado sob a MIT License.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Feito com 💙 por Leandro Tercette.
