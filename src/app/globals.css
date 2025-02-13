@@ -21,7 +21,7 @@ a {
   text-decoration: none;
 }
 
-/* 🎨 Definição de cores padrão */
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -68,7 +68,6 @@ a {
   }
 }
 
-/* 🖌 Aplicando cores com Tailwind */
 @layer base {
   html {
     @apply bg-background text-foreground transition-colors;
