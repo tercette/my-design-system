@@ -6,6 +6,78 @@ const meta: Meta<typeof Button> = {
   title: "Design System/Button",
   component: Button,
   tags: ["autodocs"],
+  parameters: {
+    layout: "centered",
+    docs: {
+      description: {
+        component: `
+    ### 📌 Componente \`Button\`
+    
+    O **Button** é um dos elementos fundamentais para interações dentro da aplicação. Ele é altamente customizável, oferecendo diferentes variantes, tamanhos e estados para atender a diversos contextos de uso.
+    
+    ---
+    
+    ### 🎯 **Características**
+    - **Responsivo** 📱: Se adapta ao layout automaticamente.
+    - **Acessível** ♿: Usa ARIA corretamente para melhor experiência.
+    - **Customizável** 🎨: Suporte para variantes, tamanhos e estilos personalizados.
+    - **Suporte a Ícones** 🔥: Pode conter texto, ícones ou ambos.
+    
+    ---
+    
+    ### 🎨 **Tokens Utilizados**
+    - **Cor de fundo:** \`bg-primary\`, \`bg-secondary\`, \`bg-destructive\`, \`bg-muted\`
+    - **Texto:** \`text-primary-foreground\`, \`text-secondary-foreground\`, \`text-muted-foreground\`
+    - **Borda:** \`border-border\`
+    - **Sombras:** \`shadow\`, \`shadow-sm\`
+    - **Transições:** \`transition-colors\`, \`focus-visible:ring-ring\`
+    
+    ---
+    
+    ### ⚙️ **Propriedades (Props)**
+    
+    | Prop       | Tipo                                          | Descrição |
+    |------------|-----------------------------------------------|-----------|
+    | \`variant\`  | \`"default" | "destructive" | "outline" | "secondary" | "ghost" | "link"\` | Define a aparência do botão. |
+    | \`size\`     | \`"sm" | "default" | "lg" | "icon"\` | Define o tamanho do botão. |
+    | \`disabled\` | \`boolean\` | Define se o botão está desativado. |
+    | \`children\` | \`ReactNode\` | Conteúdo dentro do botão (texto ou ícone). |
+    
+    ---
+    
+    ### 🛠 **Exemplos de Uso**
+    
+    #### **🔹 Botão Padrão**
+    \`\`\`tsx
+    <Button variant="default" size="default">Clique Aqui</Button>
+    \`\`\`
+    
+    #### **🔹 Botão Secundário**
+    \`\`\`tsx
+    <Button variant="secondary" size="lg">Continuar</Button>
+    \`\`\`
+    
+    #### **🔹 Botão com Ícone**
+    \`\`\`tsx
+    <Button variant="default" size="icon">
+      <TrashIcon className="w-5 h-5" />
+    </Button>
+    \`\`\`
+    
+    #### **🔹 Botão Desabilitado**
+    \`\`\`tsx
+    <Button variant="default" size="default" disabled>
+      Desativado
+    </Button>
+    \`\`\`
+    
+    ---
+    📌 **Nota:** Esse botão faz parte do **Design System** e deve seguir os padrões estabelecidos para consistência na aplicação.
+        `,
+      },
+    },
+    
+},
   argTypes: {
     variant: {
       control: "select",
