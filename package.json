@@ -2,11 +2,16 @@
   "name": "my-design-system",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://tercette.github.io/my-design-system",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "predeploy": "npm run build-storybook",
+    "deploy": "gh-pages -d storybook-static"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.6",
@@ -22,17 +27,33 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
+    "@chromatic-com/storybook": "^3.2.4",
     "@eslint/eslintrc": "^3",
+    "@storybook/addon-essentials": "^8.5.5",
+    "@storybook/addon-interactions": "^8.5.5",
+    "@storybook/addon-onboarding": "^8.5.5",
+    "@storybook/blocks": "^8.5.5",
+    "@storybook/nextjs": "^8.5.5",
+    "@storybook/react": "^8.5.5",
+    "@storybook/test": "^8.5.5",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "autoprefixer": "^10.4.20",
     "eslint": "^9",
     "eslint-config-next": "15.1.7",
+    "eslint-plugin-storybook": "^0.11.2",
+    "gh-pages": "^6.3.0",
     "postcss": "^8.5.2",
+    "storybook": "^8.5.5",
     "tailwindcss": "^3.4.17",
     "typescript": "^5",
     "webpack": "^5.97.1",
     "webpack-cli": "^6.0.1"
+  },
+  "eslintConfig": {
+    "extends": [
+      "plugin:storybook/recommended"
+    ]
   }
 }
