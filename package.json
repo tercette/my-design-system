@@ -1,17 +1,25 @@
 {
-  "name": "my-design-system",
-  "version": "0.1.0",
-  "private": true,
+  "name": "@tercetreta37/my-design-system",
+  "version": "1.0.0",
+  "description": "Biblioteca de componentes do Design System",
   "homepage": "https://tercette.github.io/my-design-system",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tercette/my-design-system.git"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && tsc",
     "start": "next start",
     "lint": "next lint",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "predeploy": "npm run build-storybook",
-    "deploy": "gh-pages -d storybook-static"
+    "deploy": "gh-pages -d storybook-static",
+    "prepublishOnly": "npm run build"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.6",

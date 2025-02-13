@@ -54,6 +54,9 @@ Commit suas alterações (git commit -m 'Adiciona minha feature').
 Faça o push para sua branch (git push origin minha-feature).
 Abra um Pull Request.
 
+## Publicacao da biblioteca no NPM :  https://www.npmjs.com/package/@tercetreta37/my-design-system
+para instalar a biblioteca, entre no seu terminal: npm i @tercetreta37/my-design-system
+
 ## Este projeto está licenciado sob a MIT License.
 
 Feito com 💙 por Leandro Tercette.
