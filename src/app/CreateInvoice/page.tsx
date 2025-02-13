@@ -1,7 +1,8 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
+import { Suspense, useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -10,6 +11,15 @@ import { Invoice } from "@/types/invoice.types";
 
 export default function CreateInvoice() {
   const router = useRouter();
+
+  return (
+    <Suspense fallback={<div>Carregando...</div>}>
+      <CreateInvoiceContent router={router} />
+    </Suspense>
+  );
+}
+
+function CreateInvoiceContent({ router }: { router: ReturnType<typeof useRouter> }) {
   const searchParams = useSearchParams();
   const invoiceId = searchParams.get("id");
 
@@ -19,19 +29,6 @@ export default function CreateInvoice() {
     method: "",
     amount: "",
   });
-
-  const generateNextInvoiceId = () => {
-    const storedInvoices = JSON.parse(localStorage.getItem("invoices") || "[]");
-
-    if (storedInvoices.length === 0) {
-      return "INV001";
-    }
-
-    const lastInvoice = storedInvoices[storedInvoices.length - 1];
-    const lastIdNumber = parseInt(lastInvoice.id.replace("INV", ""), 10) || 0;
-    
-    return `INV${String(lastIdNumber + 1).padStart(3, "0")}`;
-  };
 
   useEffect(() => {
     if (invoiceId) {
@@ -47,6 +44,19 @@ export default function CreateInvoice() {
       }));
     }
   }, [invoiceId]);
+
+  const generateNextInvoiceId = () => {
+    const storedInvoices = JSON.parse(localStorage.getItem("invoices") || "[]");
+
+    if (storedInvoices.length === 0) {
+      return "INV001";
+    }
+
+    const lastInvoice = storedInvoices[storedInvoices.length - 1];
+    const lastIdNumber = parseInt(lastInvoice.id.replace("INV", ""), 10) || 0;
+    
+    return `INV${String(lastIdNumber + 1).padStart(3, "0")}`;
+  };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
