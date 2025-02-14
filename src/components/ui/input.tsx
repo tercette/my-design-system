@@ -8,15 +8,15 @@ const inputVariants = {
   lg: "h-10 px-4 py-2",
 } as const;
 
-type InputSize = keyof typeof inputVariants; // 🔹 Define um tipo baseado nas chaves do objeto
+type InputSize = keyof typeof inputVariants;
 
 interface InputProps extends React.ComponentProps<"input"> {
-  inputSize?: InputSize; // 🔹 Renomeamos de `size` para `inputSize`
+  inputSize?: InputSize;
 }
 
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
   ({ className, type, inputSize = "default", ...props }, ref) => {
-    const variantClass = inputVariants[inputSize] ?? inputVariants.default; // 🔹 Garante que sempre será válido
+    const variantClass = inputVariants[inputSize] ?? inputVariants.default;
 
     return (
       <input
