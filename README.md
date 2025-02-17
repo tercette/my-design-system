@@ -34,7 +34,7 @@ git clone https://github.com/tercette/my-design-system
 cd seu-repositorio
 
 ## 📦 2. Instale as Dependências
-npm install ou yarnr install
+npm install ou yarn install
 
 ## 📌 3. Rodando o Storybook
 
