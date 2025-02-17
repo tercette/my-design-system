@@ -12,7 +12,7 @@ Este repositório contém um **Design System** desenvolvido com **React, TypeScr
 
 ## 📖 Documentação dos Componentes
 Todos os componentes possuem documentação interativa via Storybook.
-A documentação está disponível em: [Storybook Deploy](https://tercette.github.io/my-design-system/?path=/docs/design-system-table--docs).
+A documentação via Storybook está disponível em: [Storybook Deploy](https://tercette.github.io/my-design-system/?path=/docs/design-system-table--docs).
 A especificação técnica dos componentes foi feita com base nas diretrizes do time de UI/UX.
 Cada componente usa tokens de design para garantir consistência visual.
 
@@ -30,7 +30,7 @@ Os dados da tabela utilizam o localStorage para persistencia de estado.
 Siga os passos abaixo para rodar o projeto localmente:
 
 ## 📥 1. Clone o Repositório
-git clone https://github.com/seu-usuario/seu-repositorio.git
+git clone https://github.com/tercette/my-design-system
 cd seu-repositorio
 
 ## 📦 2. Instale as Dependências
