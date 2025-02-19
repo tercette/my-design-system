@@ -12,7 +12,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "next dev",
-    "build": "next build && tsc",
+    "build": "next build && tsc storybook",
     "start": "next start",
     "lint": "next lint",
     "storybook": "storybook dev -p 6006",
